@@ -8,12 +8,19 @@ static int methodFor(int n)
 
 static int methodWhile(int n)
 {
-	(void)n;
-	return 0;
+	int answer = 0;
+	int i = 1;
+	while(int i <= n){
+		answer += i;
+		i += 1;
+	}
+	return answer;
 }
 
 static int methodRecurse(int n)
 {
-	(void)n;
-	return 0;
+	if(n == 1){
+		return 1;
+	}
+	return n + methodRecurse(n - 1);
 }
